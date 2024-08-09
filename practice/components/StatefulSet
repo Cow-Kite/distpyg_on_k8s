@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: worker  # StatefulSet의 이름
+spec:
+  serviceName: "distpyg"  # 헤드리스 서비스의 이름과 일치하도록 설정
+  replicas: 2  # 생성할 Pod의 수
+  selector:
+    matchLabels:
+      app: worker  # Pod를 선택하는 라벨 설정
+  template:
+    metadata:
+      labels:
+        app: worker  # Pod 라벨 설정
+    spec:
+      nodeSelector:
+        kubernetes.io/hostname: sn03  
+      restartPolicy: Always  # StatefulSet의 기본 재시작 정책
+      containers:
+      - name: example-workload
+        image: cowkite/kubectl:v1  # bash가 포함된 이미지 사용
+        command: ["/bin/bash", "-c", "--"]
+        args: ["while true; do sleep 30; done;"]  # 무한 루프를 통해 Pod가 계속 실행되도록 설정  
+  volumeClaimTemplates: []  # StatefulSet에서는 보통 볼륨 클레임 템플릿을 사용
