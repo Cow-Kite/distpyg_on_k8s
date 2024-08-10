@@ -7,7 +7,7 @@ spec:
     kubernetes.io/hostname: sn01
   containers:
   - name: distpyg-container
-    image: cowkite/distpyg:v2
+    image: cowkite/distpyg:v4
     command: ["/bin/sh"]
     args: ["-c", "sleep infinity"]
     volumeMounts:
