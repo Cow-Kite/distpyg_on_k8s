@@ -54,7 +54,7 @@ def test(
 
     with context:
         if progress_bar:
-            loader = tqdm(loader, desc=f'[Node {dist_context.rank}] Test')
+            loader = tqdm(loader, desc=f'[Pod {dist_context.rank}] Test')
 
         start_time = batch_time = time.time()
         for i, batch in enumerate(loader):
@@ -69,7 +69,7 @@ def test(
             total_examples += y_pred.size(0)
             batch_acc = int((y_pred == y_true).sum()) / y_pred.size(0)
 
-            result = (f'[Node {dist_context.rank}] Test: epoch={epoch}, '
+            result = (f'[Pod {dist_context.rank}] Test: epoch={epoch}, '
                       f'it={i}, acc={batch_acc:.4f}, '
                       f'time={(time.time() - batch_time):.4f}')
             batch_time = time.time()
@@ -80,11 +80,18 @@ def test(
                 log.close()
 
             if not progress_bar:
-                print(result)
+                print(result, flush=True)
 
     total_acc = total_correct / total_examples
-    print(f'[Node {dist_context.rank}] Test epoch {epoch} END: '
+    test_epoch = (f'[Pod {dist_context.rank}] Test epoch {epoch} END: '
           f'acc={total_acc:.4f}, time={(time.time() - start_time):.2f}')
+
+    if logfile:
+        log = open(logfile, 'a+')
+        log.write(f'{test_epoch}\n')
+        log.close()
+
+    print(test_epoch, flush=True)
     torch.distributed.barrier()
 
 
@@ -99,6 +106,8 @@ def train(
     num_loader_threads=10,
     progress_bar=True,
 ):
+    sync_time = 0
+
     def train_homo(batch):
         out = model(batch.x, batch.edge_index)[:batch.batch_size]
         loss = F.cross_entropy(out, batch.y[:batch.batch_size])
@@ -122,27 +131,36 @@ def train(
 
     with context:
         if progress_bar:
-            loader = tqdm(loader, desc=f'[Node {dist_context.rank}] Train')
+            loader = tqdm(loader, desc=f'[Pod {dist_context.rank}] Train')
 
         start_time = batch_time = time.time()
         for i, batch in enumerate(loader):
             batch = batch.to(device)
             optimizer.zero_grad()
 
+            batch_start = time.time()
             if isinstance(batch, HeteroData):
                 loss, batch_size = train_hetero(batch)
             else:
                 loss, batch_size = train_homo(batch)
+            stop_batch = time.time() - batch_start
+            #print('[INFO] Batch_Train_Time: ', time.time() - batch_start, flush=True)
 
+            start_grad = time.time()
             loss.backward()
             optimizer.step()
+            stop_grad = time.time() - start_grad
+            #print('[INFO] Grad_Time: ', stop_grad, flush=True)
+            sync_time += stop_grad
 
             total_loss += float(loss) * batch_size
             total_examples += batch_size
 
-            result = (f'[Node {dist_context.rank}] Train: epoch={epoch}, '
+            result = (f'[Pod {dist_context.rank}] Train: epoch={epoch}, '
                       f'it={i}, loss={loss:.4f}, '
-                      f'time={(time.time() - batch_time):.4f}')
+                      f'time={(time.time() - batch_time):.4f}, '
+                      f'batch_time={(stop_batch):.4f}, '
+                      f'grad_Time={(stop_grad):.4f} ')
             batch_time = time.time()
 
             if logfile:
@@ -151,13 +169,20 @@ def train(
                 log.close()
 
             if not progress_bar:
-                print(result)
+                print(result, flush=True)
 
-    print(f'[Node {dist_context.rank}] Train epoch {epoch} END: '
+    epoch_result = (f'[Pod {dist_context.rank}] Train epoch {epoch} END: '
           f'loss={total_loss/total_examples:.4f}, '
-          f'time={(time.time() - start_time):.2f}')
-    torch.distributed.barrier()
+          f'time={(time.time() - start_time):.2f}, '
+          f'sync_time={(sync_time):.3f}')
 
+    if logfile:
+        log = open(logfile, 'a+')
+        log.write(f'{epoch_result}\n')
+        log.close()
+    
+    print(epoch_result, flush=True)
+    torch.distributed.barrier()
 
 def run_proc(
     local_proc_rank: int,
@@ -226,7 +251,7 @@ def run_proc(
         backend='gloo',
         rank=current_ctx.rank,
         world_size=current_ctx.world_size,
-        init_method=f'tcp://worker-0.distpyg.sykang.svc.cluster.local:{ddp_port}',
+        init_method=f'tcp://{master_addr}:{ddp_port}',
     )
 
     print('--- Initialize distributed loaders ...')
@@ -315,7 +340,7 @@ def run_proc(
                 num_loader_threads,
                 progress_bar,
             )
-    print(f'--- [Node {current_ctx.rank}] Closing ---')
+    print(f'--- [Pod {current_ctx.rank}] Closing ---')
     torch.distributed.destroy_process_group()
 
 
@@ -438,7 +463,7 @@ if __name__ == '__main__':
     print(f'* progress bars enabled: {args.progress_bar}')
 
     if args.logging:
-        logfile = f'dist_cpu-node{args.node_rank}.txt'
+        logfile = f'dist_cpu-pod{args.node_rank}.txt'
         with open(logfile, 'a+') as log:
             log.write(f'\n--- Inputs: {str(args)}')
     else:
