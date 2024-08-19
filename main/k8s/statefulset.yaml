@@ -28,7 +28,7 @@ spec:
       volumes:
       - name: local-storage
         hostPath:
-          path: /home/gnn/k8s/main  
+          path: /data/workspace
           type: DirectoryOrCreate  
       - name: dshm  # /dev/shm용 emptyDir 볼륨
         emptyDir:
