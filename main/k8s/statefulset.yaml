@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: worker  # StatefulSet의 이름
+spec:
+  replicas: 2  # 생성할 Pod의 수
+  selector:
+    matchLabels:
+      app: worker  # Pod를 선택하는 라벨 설정
+  template:
+    metadata:
+      labels:
+        app: worker  # Pod 라벨 설정
+    spec:
+      nodeSelector:
+        kubernetes.io/hostname: sn01  # Pod가 SN01 노드에서만 실행되도록 설정
+      restartPolicy: Always  
+      containers:
+      - name: example-workload
+        image: cowkite/distpyg:v10
+        command: ["/bin/bash", "-c", "--"]
+        args: ["while true; do sleep 30; done;"] 
+        volumeMounts:
+        - name: local-storage
+          mountPath: /app
+        - name: dshm  # 추가된 볼륨 마운트
+          mountPath: /dev/shm
+      volumes:
+      - name: local-storage
+        hostPath:
+          path: /home/gnn/k8s/main  
+          type: DirectoryOrCreate  
+      - name: dshm  # /dev/shm용 emptyDir 볼륨
+        emptyDir:
+          medium: Memory  # 메모리를 사용하는 emptyDir 설정
+  volumeClaimTemplates: [] 
