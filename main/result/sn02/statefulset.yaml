@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: pod
+spec:
+  replicas: 2  
+  selector:
+    matchLabels:
+      app: pod  
+  template:
+    metadata:
+      labels:
+        app: pod  
+    spec:
+      restartPolicy: Always  
+      nodeSelector:
+        kubernetes.io/hostname: sn02
+      containers:
+      - name: workspace
+        image: cowkite/distpyg:v10
+        command: ["/bin/bash", "-c", "--"]
+        args: ["while true; do sleep 30; done;"] 
+        volumeMounts:
+        - name: local-storage
+          mountPath: /app
+        - name: dshm  
+          mountPath: /dev/shm
+      volumes:
+      - name: local-storage
+        hostPath:
+          path: /home/gnn/k8s
+          type: DirectoryOrCreate  
+      - name: dshm  
+        emptyDir:
+          medium: Memory  
+  volumeClaimTemplates: [] 
