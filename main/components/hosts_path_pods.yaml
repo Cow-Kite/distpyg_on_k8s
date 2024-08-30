@@ -1,0 +1,37 @@
+# hostpath로 볼륨을 마운트하고 분산 학습하는 pods
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: pod
+spec:
+  replicas: 2  
+  selector:
+    matchLabels:
+      app: pod  
+  template:
+    metadata:
+      labels:
+        app: pod  
+    spec:
+      nodeSelector:
+        kubernetes.io/hostname: sn02
+      restartPolicy: Always  
+      containers:
+      - name: workspace
+        image: cowkite/distpyg:v10
+        command: ["/bin/bash", "-c", "--"]
+        args: ["while true; do sleep 30; done;"] 
+        volumeMounts:
+        - name: local-storage
+          mountPath: /app
+        - name: dshm  
+          mountPath: /dev/shm
+      volumes:
+      - name: local-storage
+        hostPath:
+          path: /home/gnn/k8s
+          type: DirectoryOrCreate  
+      - name: dshm  
+        emptyDir:
+          medium: Memory  
+  volumeClaimTemplates: [] 
