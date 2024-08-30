@@ -1,3 +1,4 @@
+# cephfs-storage를 두 개의 pod가 공유하는지 test하는 pods
 apiVersion: v1
 kind: Pod
 metadata:
