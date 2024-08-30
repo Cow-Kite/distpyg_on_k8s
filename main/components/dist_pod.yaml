@@ -1,3 +1,4 @@
+# statefulSet으로 cephfs의 같은 경로를 공유하는 pods 생성
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
