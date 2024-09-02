@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: app-container
-        image: cowkite/distpyg:v11
+        image: cowkite/distpyg:v10
         command: ["sh", "-c", "echo \"$POD_CONFIG\" > /data/distpyg/pod_config.yaml && while true; do sleep 3600; done"]
         env:
         - name: POD_CONFIG
