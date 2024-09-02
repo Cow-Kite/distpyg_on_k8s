@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: pod-config
+  namespace: sykang
+data:
+  pod: |
+    pod-0
+    pod-1
