@@ -22,7 +22,7 @@ spec:
         - name: POD_CONFIG
           valueFrom:
             configMapKeyRef:
-              name: pod-config4
+              name: pod-config
               key: pod
         volumeMounts:
         - name: cephfs-storage  
