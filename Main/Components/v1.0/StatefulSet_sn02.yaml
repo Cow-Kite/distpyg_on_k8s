@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: pod
+  namespace: sykang
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: pod
+  template:
+    metadata:
+      labels:
+        app: pod
+    spec:
+      nodeSelector:
+        kubernetes.io/hostname: sn02
+      containers:
+      - name: app-container
+        image: cowkite/distpyg:v10
+        command: ["sh", "-c", "echo \"$POD_CONFIG\" > /data/distpyg/pod_config.yaml && while true; do sleep 3600; done"]
+        env:
+        - name: POD_CONFIG
+          valueFrom:
+            configMapKeyRef:
+              name: pod-config
+              key: pod
+        volumeMounts:
+        - name: cephfs-storage  
+          mountPath: /data
+        - name: dshm
+          mountPath: /dev/shm
+      volumes:
+      - name: cephfs-storage  
+        persistentVolumeClaim:
+          claimName: cephfs-pvc
+      - name: dshm
+        emptyDir:
+          medium: Memory
