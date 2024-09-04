@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: metis
+spec:
+  containers:
+  - name: partition
+    image: cowkite/graph_partition:v7
+    command: ["bash", "-c"]
+    args: ["echo y | python3 partition_graph.py --dataset=ogbn-products --root_dir=/data/data_2 --num_partitions=2"]
+    volumeMounts:
+    - name: cephfs-storage
+      mountPath: /data
+  volumes:
+  - name: cephfs-storage
+    persistentVolumeClaim:
+      claimName: cephfs-pvc
