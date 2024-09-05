@@ -1,0 +1,400 @@
+
+--- Inputs: Namespace(dataset='ogbn-products', dataset_root_dir='../data8/partitions/ogbn-products/8-parts', num_nodes=8, num_neighbors='5,5,5', node_rank=0, num_epochs=5, batch_size=1024, num_workers=2, num_loader_threads=10, concurrency=4, async_sampling=True, master_addr='pod-0', ddp_port=11111, train_loader_port=11112, test_loader_port=11113, logging=True, progress_bar=False)
+--- Inputs: Namespace(dataset='ogbn-products', dataset_root_dir='../data8/partitions/ogbn-products/8-parts', num_nodes=8, num_neighbors='5,5,5', node_rank=0, num_epochs=5, batch_size=1024, num_workers=2, num_loader_threads=10, concurrency=4, async_sampling=True, master_addr='pod-0', ddp_port=11111, train_loader_port=11112, test_loader_port=11113, logging=True, progress_bar=False)
+--- Inputs: Namespace(dataset='ogbn-products', dataset_root_dir='../data8/partitions/ogbn-products/8-parts', num_nodes=8, num_neighbors='5,5,5', node_rank=0, num_epochs=5, batch_size=1024, num_workers=2, num_loader_threads=10, concurrency=4, async_sampling=True, master_addr='pod-0', ddp_port=11111, train_loader_port=11112, test_loader_port=11113, logging=True, progress_bar=False)[Pod 0] Train: epoch=1, it=0, loss=3.8418, time=14.1342, batch_time=2.1376, grad_Time=3.1043 
+[Pod 0] Train: epoch=1, it=1, loss=3.7173, time=5.6084, batch_time=2.1612, grad_Time=3.4182 
+[Pod 0] Train: epoch=1, it=2, loss=3.6068, time=4.9888, batch_time=2.2069, grad_Time=2.6884 
+[Pod 0] Train: epoch=1, it=3, loss=3.4588, time=5.5113, batch_time=2.1142, grad_Time=3.3391 
+[Pod 0] Train: epoch=1, it=4, loss=3.3132, time=4.8521, batch_time=2.6132, grad_Time=2.1618 
+[Pod 0] Train: epoch=1, it=5, loss=3.2137, time=5.2264, batch_time=2.4994, grad_Time=2.6649 
+[Pod 0] Train: epoch=1, it=6, loss=3.1189, time=5.1061, batch_time=1.8195, grad_Time=3.2318 
+[Pod 0] Train: epoch=1, it=7, loss=2.9915, time=5.2305, batch_time=1.8066, grad_Time=3.3571 
+[Pod 0] Train: epoch=1, it=8, loss=2.9504, time=5.1762, batch_time=1.8382, grad_Time=3.2959 
+[Pod 0] Train: epoch=1, it=9, loss=2.8340, time=5.2107, batch_time=1.9745, grad_Time=3.1654 
+[Pod 0] Train: epoch=1, it=10, loss=2.8164, time=5.1412, batch_time=1.6437, grad_Time=3.4500 
+[Pod 0] Train: epoch=1, it=11, loss=2.6675, time=4.9659, batch_time=1.7219, grad_Time=3.1957 
+[Pod 0] Train: epoch=1, it=12, loss=2.7168, time=5.4861, batch_time=1.7170, grad_Time=3.7214 
+[Pod 0] Train: epoch=1, it=13, loss=2.5699, time=4.8737, batch_time=2.0036, grad_Time=2.7998 
+[Pod 0] Train: epoch=1, it=14, loss=2.5063, time=5.6694, batch_time=2.1776, grad_Time=3.4440 
+[Pod 0] Train: epoch=1, it=15, loss=2.4904, time=4.7043, batch_time=2.5022, grad_Time=2.1421 
+[Pod 0] Train: epoch=1, it=16, loss=2.3980, time=5.6318, batch_time=1.8733, grad_Time=3.7233 
+[Pod 0] Train: epoch=1, it=17, loss=2.3607, time=4.9308, batch_time=2.3418, grad_Time=2.5039 
+[Pod 0] Train: epoch=1, it=18, loss=2.3133, time=5.2491, batch_time=1.8377, grad_Time=3.3408 
+[Pod 0] Train: epoch=1, it=19, loss=2.3307, time=4.9229, batch_time=2.5277, grad_Time=2.3278 
+[Pod 0] Train: epoch=1, it=20, loss=2.2442, time=5.0899, batch_time=1.5832, grad_Time=3.4643 
+[Pod 0] Train: epoch=1, it=21, loss=2.2271, time=4.9879, batch_time=1.8980, grad_Time=3.0456 
+[Pod 0] Train: epoch=1, it=22, loss=2.1667, time=4.6031, batch_time=1.8500, grad_Time=2.6772 
+[Pod 0] Train: epoch=1, it=23, loss=2.1291, time=4.7521, batch_time=1.8753, grad_Time=2.8336 
+[Pod 0] Train epoch 1 END: loss=2.7910, time=132.05, sync_time=73.097
+[Pod 0] Train: epoch=2, it=0, loss=2.0866, time=6.2117, batch_time=1.8987, grad_Time=2.6164 
+[Pod 0] Train: epoch=2, it=1, loss=2.1157, time=4.9647, batch_time=2.2260, grad_Time=2.6199 
+[Pod 0] Train: epoch=2, it=2, loss=1.9918, time=5.5623, batch_time=2.2733, grad_Time=3.2271 
+[Pod 0] Train: epoch=2, it=3, loss=2.0070, time=4.7889, batch_time=1.9077, grad_Time=2.7932 
+[Pod 0] Train: epoch=2, it=4, loss=1.9313, time=5.1643, batch_time=2.1341, grad_Time=2.9482 
+[Pod 0] Train: epoch=2, it=5, loss=1.9126, time=5.0230, batch_time=2.2315, grad_Time=2.7475 
+[Pod 0] Train: epoch=2, it=6, loss=1.8288, time=5.2250, batch_time=2.4130, grad_Time=2.7514 
+[Pod 0] Train: epoch=2, it=7, loss=1.7822, time=4.9920, batch_time=2.2189, grad_Time=2.7264 
+[Pod 0] Train: epoch=2, it=8, loss=1.7592, time=5.2548, batch_time=2.2899, grad_Time=2.8779 
+[Pod 0] Train: epoch=2, it=9, loss=1.7342, time=4.9941, batch_time=1.9925, grad_Time=2.9076 
+[Pod 0] Train: epoch=2, it=10, loss=1.7645, time=5.1766, batch_time=1.8577, grad_Time=3.2870 
+[Pod 0] Train: epoch=2, it=11, loss=1.7110, time=5.3760, batch_time=2.0192, grad_Time=3.3090 
+[Pod 0] Train: epoch=2, it=12, loss=1.6679, time=5.3984, batch_time=2.3064, grad_Time=3.0316 
+[Pod 0] Train: epoch=2, it=13, loss=1.7474, time=4.5521, batch_time=2.2437, grad_Time=2.2245 
+[Pod 0] Train: epoch=2, it=14, loss=1.6312, time=5.3616, batch_time=1.5312, grad_Time=3.7896 
+[Pod 0] Train: epoch=2, it=15, loss=1.5778, time=5.1291, batch_time=2.0151, grad_Time=3.0686 
+[Pod 0] Train: epoch=2, it=16, loss=1.5788, time=5.1957, batch_time=2.5426, grad_Time=2.5591 
+[Pod 0] Train: epoch=2, it=17, loss=1.4824, time=5.0335, batch_time=2.0910, grad_Time=2.8914 
+[Pod 0] Train: epoch=2, it=18, loss=1.5362, time=5.0916, batch_time=1.7982, grad_Time=3.2318 
+[Pod 0] Train: epoch=2, it=19, loss=1.4823, time=5.1254, batch_time=2.1395, grad_Time=2.9154 
+[Pod 0] Train: epoch=2, it=20, loss=1.5216, time=4.9528, batch_time=1.7107, grad_Time=3.1990 
+[Pod 0] Train: epoch=2, it=21, loss=1.3905, time=4.9333, batch_time=1.7165, grad_Time=3.1726 
+[Pod 0] Train: epoch=2, it=22, loss=1.3670, time=5.0740, batch_time=1.5851, grad_Time=3.4583 
+[Pod 0] Train: epoch=2, it=23, loss=1.3816, time=4.7230, batch_time=1.5808, grad_Time=3.0844 
+[Pod 0] Train epoch 2 END: loss=1.7079, time=123.30, sync_time=71.438
+[Pod 0] Train: epoch=3, it=0, loss=1.3241, time=5.8541, batch_time=1.9185, grad_Time=2.3791 
+[Pod 0] Train: epoch=3, it=1, loss=1.2887, time=5.2328, batch_time=2.0506, grad_Time=3.1072 
+[Pod 0] Train: epoch=3, it=2, loss=1.3135, time=4.9843, batch_time=2.2699, grad_Time=2.6419 
+[Pod 0] Train: epoch=3, it=3, loss=1.2680, time=5.0638, batch_time=2.5955, grad_Time=2.4117 
+[Pod 0] Train: epoch=3, it=4, loss=1.2067, time=5.3061, batch_time=2.0010, grad_Time=3.2431 
+[Pod 0] Train: epoch=3, it=5, loss=1.1853, time=4.9858, batch_time=1.9638, grad_Time=2.9512 
+[Pod 0] Train: epoch=3, it=6, loss=1.1824, time=4.9934, batch_time=2.5494, grad_Time=2.3893 
+[Pod 0] Train: epoch=3, it=7, loss=1.1674, time=5.5106, batch_time=2.0738, grad_Time=3.3789 
+[Pod 0] Train: epoch=3, it=8, loss=1.2608, time=4.9702, batch_time=2.0887, grad_Time=2.8085 
+[Pod 0] Train: epoch=3, it=9, loss=1.0972, time=5.1136, batch_time=2.4815, grad_Time=2.5781 
+[Pod 0] Train: epoch=3, it=10, loss=1.0722, time=5.2644, batch_time=1.9975, grad_Time=3.1945 
+[Pod 0] Train: epoch=3, it=11, loss=1.0437, time=4.8483, batch_time=2.6153, grad_Time=2.1527 
+[Pod 0] Train: epoch=3, it=12, loss=1.0444, time=5.2986, batch_time=2.1634, grad_Time=3.0579 
+[Pod 0] Train: epoch=3, it=13, loss=1.1771, time=5.3989, batch_time=2.0443, grad_Time=3.2967 
+[Pod 0] Train: epoch=3, it=14, loss=1.0710, time=4.6851, batch_time=2.3120, grad_Time=2.2292 
+[Pod 0] Train: epoch=3, it=15, loss=1.0256, time=5.3263, batch_time=2.2404, grad_Time=3.0492 
+[Pod 0] Train: epoch=3, it=16, loss=1.0063, time=5.0657, batch_time=2.2963, grad_Time=2.7069 
+[Pod 0] Train: epoch=3, it=17, loss=1.0576, time=4.9706, batch_time=2.2808, grad_Time=2.6038 
+[Pod 0] Train: epoch=3, it=18, loss=0.9316, time=5.4350, batch_time=2.2820, grad_Time=3.0708 
+[Pod 0] Train: epoch=3, it=19, loss=0.9749, time=4.8213, batch_time=2.4062, grad_Time=2.3450 
+[Pod 0] Train: epoch=3, it=20, loss=0.9340, time=5.1763, batch_time=1.9143, grad_Time=3.2139 
+[Pod 0] Train: epoch=3, it=21, loss=1.0091, time=4.5296, batch_time=1.8815, grad_Time=2.5858 
+[Pod 0] Train: epoch=3, it=22, loss=0.9867, time=4.9422, batch_time=1.9028, grad_Time=2.9962 
+[Pod 0] Train: epoch=3, it=23, loss=0.9338, time=4.8375, batch_time=1.8449, grad_Time=2.9474 
+[Pod 0] Train epoch 3 END: loss=1.1068, time=122.62, sync_time=67.339
+[Pod 0] Train: epoch=4, it=0, loss=0.9779, time=6.4185, batch_time=1.6168, grad_Time=3.6369 
+[Pod 0] Train: epoch=4, it=1, loss=0.9000, time=4.8850, batch_time=1.9586, grad_Time=2.8640 
+[Pod 0] Train: epoch=4, it=2, loss=0.9572, time=4.6486, batch_time=2.0524, grad_Time=2.5344 
+[Pod 0] Train: epoch=4, it=3, loss=0.8969, time=5.0862, batch_time=2.4961, grad_Time=2.5161 
+[Pod 0] Train: epoch=4, it=4, loss=0.8136, time=5.2093, batch_time=2.2418, grad_Time=2.9172 
+[Pod 0] Train: epoch=4, it=5, loss=0.9481, time=4.9028, batch_time=2.0273, grad_Time=2.8146 
+[Pod 0] Train: epoch=4, it=6, loss=0.8335, time=5.2542, batch_time=2.4335, grad_Time=2.7712 
+[Pod 0] Train: epoch=4, it=7, loss=0.9420, time=4.7925, batch_time=1.9791, grad_Time=2.7271 
+[Pod 0] Train: epoch=4, it=8, loss=0.8105, time=5.1038, batch_time=2.3169, grad_Time=2.7195 
+[Pod 0] Train: epoch=4, it=9, loss=0.7935, time=5.6195, batch_time=1.7934, grad_Time=3.7456 
+[Pod 0] Train: epoch=4, it=10, loss=0.8978, time=4.2974, batch_time=2.1436, grad_Time=2.0377 
+[Pod 0] Train: epoch=4, it=11, loss=0.7319, time=5.1529, batch_time=1.8684, grad_Time=3.2466 
+[Pod 0] Train: epoch=4, it=12, loss=0.8240, time=5.1498, batch_time=2.0354, grad_Time=3.0491 
+[Pod 0] Train: epoch=4, it=13, loss=0.7886, time=5.0013, batch_time=2.3746, grad_Time=2.5497 
+[Pod 0] Train: epoch=4, it=14, loss=0.8300, time=5.0101, batch_time=2.1228, grad_Time=2.8310 
+[Pod 0] Train: epoch=4, it=15, loss=0.8556, time=5.1596, batch_time=2.2317, grad_Time=2.8697 
+[Pod 0] Train: epoch=4, it=16, loss=0.7601, time=5.4627, batch_time=1.8145, grad_Time=3.5928 
+[Pod 0] Train: epoch=4, it=17, loss=0.7543, time=4.4975, batch_time=2.1193, grad_Time=2.2676 
+[Pod 0] Train: epoch=4, it=18, loss=0.8161, time=5.6049, batch_time=2.0730, grad_Time=3.5041 
+[Pod 0] Train: epoch=4, it=19, loss=0.7632, time=4.7109, batch_time=2.3597, grad_Time=2.2420 
+[Pod 0] Train: epoch=4, it=20, loss=0.7587, time=5.2345, batch_time=1.8269, grad_Time=3.3721 
+[Pod 0] Train: epoch=4, it=21, loss=0.6825, time=4.7700, batch_time=1.8714, grad_Time=2.8480 
+[Pod 0] Train: epoch=4, it=22, loss=0.7009, time=4.6660, batch_time=2.2045, grad_Time=2.3984 
+[Pod 0] Train: epoch=4, it=23, loss=0.8613, time=5.1817, batch_time=1.8478, grad_Time=3.3020 
+[Pod 0] Train epoch 4 END: loss=0.8291, time=121.82, sync_time=69.357
+[Pod 0] Train: epoch=5, it=0, loss=0.7371, time=6.0816, batch_time=2.0348, grad_Time=2.8008 
+[Pod 0] Train: epoch=5, it=1, loss=0.7996, time=5.0418, batch_time=2.1130, grad_Time=2.8592 
+[Pod 0] Train: epoch=5, it=2, loss=0.7167, time=5.2090, batch_time=2.1282, grad_Time=3.0014 
+[Pod 0] Train: epoch=5, it=3, loss=0.7578, time=5.1580, batch_time=1.9890, grad_Time=3.1172 
+[Pod 0] Train: epoch=5, it=4, loss=0.7221, time=4.9162, batch_time=2.2882, grad_Time=2.5482 
+[Pod 0] Train: epoch=5, it=5, loss=0.6733, time=5.0661, batch_time=1.9251, grad_Time=3.0801 
+[Pod 0] Train: epoch=5, it=6, loss=0.6691, time=5.0120, batch_time=2.0924, grad_Time=2.8596 
+[Pod 0] Train: epoch=5, it=7, loss=0.7509, time=5.0172, batch_time=1.8531, grad_Time=3.1213 
+[Pod 0] Train: epoch=5, it=8, loss=0.6960, time=4.7899, batch_time=2.3590, grad_Time=2.3428 
+[Pod 0] Train: epoch=5, it=9, loss=0.7103, time=5.2027, batch_time=2.2181, grad_Time=2.9359 
+[Pod 0] Train: epoch=5, it=10, loss=0.6702, time=5.0069, batch_time=2.0089, grad_Time=2.9283 
+[Pod 0] Train: epoch=5, it=11, loss=0.7057, time=4.9992, batch_time=2.1262, grad_Time=2.8120 
+[Pod 0] Train: epoch=5, it=12, loss=0.6710, time=5.0527, batch_time=2.4209, grad_Time=2.5918 
+[Pod 0] Train: epoch=5, it=13, loss=0.7871, time=5.1958, batch_time=1.9288, grad_Time=3.2051 
+[Pod 0] Train: epoch=5, it=14, loss=0.6673, time=5.7931, batch_time=2.1902, grad_Time=3.5360 
+[Pod 0] Train: epoch=5, it=15, loss=0.6841, time=4.0137, batch_time=1.8874, grad_Time=1.9954 
+[Pod 0] Train: epoch=5, it=16, loss=0.7079, time=5.3028, batch_time=2.0532, grad_Time=3.2143 
+[Pod 0] Train: epoch=5, it=17, loss=0.6418, time=4.8953, batch_time=2.0960, grad_Time=2.7195 
+[Pod 0] Train: epoch=5, it=18, loss=0.6612, time=5.1325, batch_time=2.2622, grad_Time=2.8189 
+[Pod 0] Train: epoch=5, it=19, loss=0.6369, time=4.9542, batch_time=1.7819, grad_Time=3.1051 
+[Pod 0] Train: epoch=5, it=20, loss=0.6462, time=4.9205, batch_time=1.8088, grad_Time=3.0608 
+[Pod 0] Train: epoch=5, it=21, loss=0.7539, time=4.6581, batch_time=1.9779, grad_Time=2.6133 
+[Pod 0] Train: epoch=5, it=22, loss=0.6932, time=4.7755, batch_time=1.8569, grad_Time=2.8663 
+[Pod 0] Train: epoch=5, it=23, loss=0.7086, time=4.8086, batch_time=2.0317, grad_Time=2.7360 
+[Pod 0] Train epoch 5 END: loss=0.7028, time=121.00, sync_time=68.869
+[Pod 0] Test: epoch=5, it=0, acc=0.6562, time=8.6870
+[Pod 0] Test: epoch=5, it=1, acc=0.6855, time=2.3411
+[Pod 0] Test: epoch=5, it=2, acc=0.6543, time=3.1718
+[Pod 0] Test: epoch=5, it=3, acc=0.6426, time=1.7621
+[Pod 0] Test: epoch=5, it=4, acc=0.6660, time=2.0911
+[Pod 0] Test: epoch=5, it=5, acc=0.6982, time=2.3844
+[Pod 0] Test: epoch=5, it=6, acc=0.6816, time=2.2815
+[Pod 0] Test: epoch=5, it=7, acc=0.6699, time=2.1692
+[Pod 0] Test: epoch=5, it=8, acc=0.6719, time=1.7653
+[Pod 0] Test: epoch=5, it=9, acc=0.6367, time=2.0848
+[Pod 0] Test: epoch=5, it=10, acc=0.6719, time=1.9727
+[Pod 0] Test: epoch=5, it=11, acc=0.6729, time=2.0439
+[Pod 0] Test: epoch=5, it=12, acc=0.6738, time=1.8198
+[Pod 0] Test: epoch=5, it=13, acc=0.6523, time=2.2629
+[Pod 0] Test: epoch=5, it=14, acc=0.6494, time=2.0052
+[Pod 0] Test: epoch=5, it=15, acc=0.6758, time=2.4270
+[Pod 0] Test: epoch=5, it=16, acc=0.6602, time=2.1668
+[Pod 0] Test: epoch=5, it=17, acc=0.6641, time=2.0342
+[Pod 0] Test: epoch=5, it=18, acc=0.6709, time=2.2769
+[Pod 0] Test: epoch=5, it=19, acc=0.6904, time=2.1088
+[Pod 0] Test: epoch=5, it=20, acc=0.7012, time=2.0383
+[Pod 0] Test: epoch=5, it=21, acc=0.6787, time=1.9918
+[Pod 0] Test: epoch=5, it=22, acc=0.6758, time=2.4778
+[Pod 0] Test: epoch=5, it=23, acc=0.6699, time=2.5108
+[Pod 0] Test: epoch=5, it=24, acc=0.6504, time=2.3689
+[Pod 0] Test: epoch=5, it=25, acc=0.6953, time=1.8933
+[Pod 0] Test: epoch=5, it=26, acc=0.6689, time=2.0313
+[Pod 0] Test: epoch=5, it=27, acc=0.6611, time=1.9320
+[Pod 0] Test: epoch=5, it=28, acc=0.7061, time=2.6461
+[Pod 0] Test: epoch=5, it=29, acc=0.6494, time=2.2770
+[Pod 0] Test: epoch=5, it=30, acc=0.6836, time=2.4136
+[Pod 0] Test: epoch=5, it=31, acc=0.6895, time=2.1428
+[Pod 0] Test: epoch=5, it=32, acc=0.6807, time=2.2498
+[Pod 0] Test: epoch=5, it=33, acc=0.6553, time=2.2102
+[Pod 0] Test: epoch=5, it=34, acc=0.6660, time=2.2219
+[Pod 0] Test: epoch=5, it=35, acc=0.6357, time=2.1402
+[Pod 0] Test: epoch=5, it=36, acc=0.6738, time=2.1463
+[Pod 0] Test: epoch=5, it=37, acc=0.6865, time=1.9949
+[Pod 0] Test: epoch=5, it=38, acc=0.6768, time=2.2654
+[Pod 0] Test: epoch=5, it=39, acc=0.6797, time=2.0361
+[Pod 0] Test: epoch=5, it=40, acc=0.6611, time=2.4682
+[Pod 0] Test: epoch=5, it=41, acc=0.6797, time=1.9635
+[Pod 0] Test: epoch=5, it=42, acc=0.6641, time=1.9791
+[Pod 0] Test: epoch=5, it=43, acc=0.6797, time=1.8024
+[Pod 0] Test: epoch=5, it=44, acc=0.6768, time=1.7458
+[Pod 0] Test: epoch=5, it=45, acc=0.6543, time=1.9407
+[Pod 0] Test: epoch=5, it=46, acc=0.6680, time=2.0077
+[Pod 0] Test: epoch=5, it=47, acc=0.6729, time=2.1567
+[Pod 0] Test: epoch=5, it=48, acc=0.6562, time=2.3150
+[Pod 0] Test: epoch=5, it=49, acc=0.6553, time=2.2247
+[Pod 0] Test: epoch=5, it=50, acc=0.6562, time=2.1434
+[Pod 0] Test: epoch=5, it=51, acc=0.6797, time=2.2329
+[Pod 0] Test: epoch=5, it=52, acc=0.6943, time=2.2680
+[Pod 0] Test: epoch=5, it=53, acc=0.6748, time=2.0468
+[Pod 0] Test: epoch=5, it=54, acc=0.6592, time=1.6016
+[Pod 0] Test: epoch=5, it=55, acc=0.6797, time=1.7036
+[Pod 0] Test: epoch=5, it=56, acc=0.6436, time=2.1177
+[Pod 0] Test: epoch=5, it=57, acc=0.6719, time=2.1572
+[Pod 0] Test: epoch=5, it=58, acc=0.6436, time=2.0228
+[Pod 0] Test: epoch=5, it=59, acc=0.6631, time=2.1472
+[Pod 0] Test: epoch=5, it=60, acc=0.6787, time=2.0700
+[Pod 0] Test: epoch=5, it=61, acc=0.6641, time=2.3430
+[Pod 0] Test: epoch=5, it=62, acc=0.6514, time=2.4016
+[Pod 0] Test: epoch=5, it=63, acc=0.6855, time=2.2915
+[Pod 0] Test: epoch=5, it=64, acc=0.6777, time=1.9546
+[Pod 0] Test: epoch=5, it=65, acc=0.6514, time=1.9578
+[Pod 0] Test: epoch=5, it=66, acc=0.6729, time=1.7165
+[Pod 0] Test: epoch=5, it=67, acc=0.6719, time=2.0905
+[Pod 0] Test: epoch=5, it=68, acc=0.6602, time=1.6310
+[Pod 0] Test: epoch=5, it=69, acc=0.6729, time=2.2353
+[Pod 0] Test: epoch=5, it=70, acc=0.6426, time=1.9763
+[Pod 0] Test: epoch=5, it=71, acc=0.6797, time=1.7239
+[Pod 0] Test: epoch=5, it=72, acc=0.6650, time=2.1351
+[Pod 0] Test: epoch=5, it=73, acc=0.6621, time=1.9792
+[Pod 0] Test: epoch=5, it=74, acc=0.6797, time=1.7160
+[Pod 0] Test: epoch=5, it=75, acc=0.6768, time=1.7409
+[Pod 0] Test: epoch=5, it=76, acc=0.6943, time=1.9935
+[Pod 0] Test: epoch=5, it=77, acc=0.6826, time=1.6479
+[Pod 0] Test: epoch=5, it=78, acc=0.6865, time=2.3487
+[Pod 0] Test: epoch=5, it=79, acc=0.6709, time=2.1871
+[Pod 0] Test: epoch=5, it=80, acc=0.6719, time=1.9610
+[Pod 0] Test: epoch=5, it=81, acc=0.6816, time=2.0347
+[Pod 0] Test: epoch=5, it=82, acc=0.6689, time=2.0127
+[Pod 0] Test: epoch=5, it=83, acc=0.6934, time=1.9881
+[Pod 0] Test: epoch=5, it=84, acc=0.6543, time=2.1069
+[Pod 0] Test: epoch=5, it=85, acc=0.6807, time=2.1476
+[Pod 0] Test: epoch=5, it=86, acc=0.6816, time=1.7024
+[Pod 0] Test: epoch=5, it=87, acc=0.6885, time=1.9491
+[Pod 0] Test: epoch=5, it=88, acc=0.6660, time=2.6560
+[Pod 0] Test: epoch=5, it=89, acc=0.6816, time=1.9799
+[Pod 0] Test: epoch=5, it=90, acc=0.6787, time=2.5214
+[Pod 0] Test: epoch=5, it=91, acc=0.6631, time=2.0068
+[Pod 0] Test: epoch=5, it=92, acc=0.6836, time=1.9839
+[Pod 0] Test: epoch=5, it=93, acc=0.6572, time=1.6812
+[Pod 0] Test: epoch=5, it=94, acc=0.6660, time=1.9346
+[Pod 0] Test: epoch=5, it=95, acc=0.6836, time=2.0928
+[Pod 0] Test: epoch=5, it=96, acc=0.7061, time=2.3254
+[Pod 0] Test: epoch=5, it=97, acc=0.6562, time=1.8652
+[Pod 0] Test: epoch=5, it=98, acc=0.6582, time=2.0041
+[Pod 0] Test: epoch=5, it=99, acc=0.6846, time=2.0336
+[Pod 0] Test: epoch=5, it=100, acc=0.6816, time=2.0896
+[Pod 0] Test: epoch=5, it=101, acc=0.6836, time=1.7985
+[Pod 0] Test: epoch=5, it=102, acc=0.6543, time=2.0308
+[Pod 0] Test: epoch=5, it=103, acc=0.6484, time=1.9726
+[Pod 0] Test: epoch=5, it=104, acc=0.6621, time=2.2450
+[Pod 0] Test: epoch=5, it=105, acc=0.6904, time=1.9909
+[Pod 0] Test: epoch=5, it=106, acc=0.6582, time=1.7994
+[Pod 0] Test: epoch=5, it=107, acc=0.6973, time=1.7279
+[Pod 0] Test: epoch=5, it=108, acc=0.6719, time=1.9333
+[Pod 0] Test: epoch=5, it=109, acc=0.6514, time=2.1049
+[Pod 0] Test: epoch=5, it=110, acc=0.6787, time=2.0598
+[Pod 0] Test: epoch=5, it=111, acc=0.6543, time=1.5762
+[Pod 0] Test: epoch=5, it=112, acc=0.6982, time=1.8920
+[Pod 0] Test: epoch=5, it=113, acc=0.6484, time=1.8999
+[Pod 0] Test: epoch=5, it=114, acc=0.6768, time=2.0204
+[Pod 0] Test: epoch=5, it=115, acc=0.6973, time=1.9640
+[Pod 0] Test: epoch=5, it=116, acc=0.6875, time=2.0919
+[Pod 0] Test: epoch=5, it=117, acc=0.6377, time=1.9083
+[Pod 0] Test: epoch=5, it=118, acc=0.6719, time=1.8977
+[Pod 0] Test: epoch=5, it=119, acc=0.6553, time=1.9718
+[Pod 0] Test: epoch=5, it=120, acc=0.6777, time=2.4370
+[Pod 0] Test: epoch=5, it=121, acc=0.6885, time=1.9051
+[Pod 0] Test: epoch=5, it=122, acc=0.6631, time=2.0765
+[Pod 0] Test: epoch=5, it=123, acc=0.6836, time=2.3035
+[Pod 0] Test: epoch=5, it=124, acc=0.6709, time=2.2243
+[Pod 0] Test: epoch=5, it=125, acc=0.6865, time=2.0057
+[Pod 0] Test: epoch=5, it=126, acc=0.6787, time=2.0338
+[Pod 0] Test: epoch=5, it=127, acc=0.6650, time=1.9448
+[Pod 0] Test: epoch=5, it=128, acc=0.6729, time=2.0270
+[Pod 0] Test: epoch=5, it=129, acc=0.6484, time=1.9778
+[Pod 0] Test: epoch=5, it=130, acc=0.6523, time=2.5341
+[Pod 0] Test: epoch=5, it=131, acc=0.6660, time=1.9921
+[Pod 0] Test: epoch=5, it=132, acc=0.6670, time=2.4230
+[Pod 0] Test: epoch=5, it=133, acc=0.6758, time=2.4892
+[Pod 0] Test: epoch=5, it=134, acc=0.6797, time=2.2331
+[Pod 0] Test: epoch=5, it=135, acc=0.6992, time=1.8868
+[Pod 0] Test: epoch=5, it=136, acc=0.6719, time=1.8441
+[Pod 0] Test: epoch=5, it=137, acc=0.6680, time=1.9724
+[Pod 0] Test: epoch=5, it=138, acc=0.6523, time=1.9409
+[Pod 0] Test: epoch=5, it=139, acc=0.6992, time=1.7947
+[Pod 0] Test: epoch=5, it=140, acc=0.6680, time=2.1072
+[Pod 0] Test: epoch=5, it=141, acc=0.6807, time=1.8396
+[Pod 0] Test: epoch=5, it=142, acc=0.6592, time=1.8128
+[Pod 0] Test: epoch=5, it=143, acc=0.6826, time=2.1119
+[Pod 0] Test: epoch=5, it=144, acc=0.6807, time=2.1059
+[Pod 0] Test: epoch=5, it=145, acc=0.6729, time=2.1349
+[Pod 0] Test: epoch=5, it=146, acc=0.6816, time=1.7322
+[Pod 0] Test: epoch=5, it=147, acc=0.6455, time=2.1151
+[Pod 0] Test: epoch=5, it=148, acc=0.6768, time=2.2411
+[Pod 0] Test: epoch=5, it=149, acc=0.6992, time=1.8927
+[Pod 0] Test: epoch=5, it=150, acc=0.6787, time=2.1999
+[Pod 0] Test: epoch=5, it=151, acc=0.6699, time=2.1479
+[Pod 0] Test: epoch=5, it=152, acc=0.6699, time=2.2120
+[Pod 0] Test: epoch=5, it=153, acc=0.6455, time=1.9464
+[Pod 0] Test: epoch=5, it=154, acc=0.6768, time=1.9624
+[Pod 0] Test: epoch=5, it=155, acc=0.6582, time=1.9445
+[Pod 0] Test: epoch=5, it=156, acc=0.6533, time=1.8835
+[Pod 0] Test: epoch=5, it=157, acc=0.6904, time=2.8057
+[Pod 0] Test: epoch=5, it=158, acc=0.7119, time=1.9555
+[Pod 0] Test: epoch=5, it=159, acc=0.6904, time=1.9511
+[Pod 0] Test: epoch=5, it=160, acc=0.6699, time=1.9616
+[Pod 0] Test: epoch=5, it=161, acc=0.6836, time=2.0482
+[Pod 0] Test: epoch=5, it=162, acc=0.6758, time=2.2510
+[Pod 0] Test: epoch=5, it=163, acc=0.6943, time=1.9474
+[Pod 0] Test: epoch=5, it=164, acc=0.6641, time=1.7533
+[Pod 0] Test: epoch=5, it=165, acc=0.6719, time=1.9638
+[Pod 0] Test: epoch=5, it=166, acc=0.6865, time=1.8042
+[Pod 0] Test: epoch=5, it=167, acc=0.6777, time=1.7796
+[Pod 0] Test: epoch=5, it=168, acc=0.6758, time=1.8097
+[Pod 0] Test: epoch=5, it=169, acc=0.6758, time=1.9791
+[Pod 0] Test: epoch=5, it=170, acc=0.6855, time=1.5591
+[Pod 0] Test: epoch=5, it=171, acc=0.6963, time=1.9398
+[Pod 0] Test: epoch=5, it=172, acc=0.6572, time=2.2011
+[Pod 0] Test: epoch=5, it=173, acc=0.6738, time=2.2154
+[Pod 0] Test: epoch=5, it=174, acc=0.6680, time=2.1748
+[Pod 0] Test: epoch=5, it=175, acc=0.6670, time=1.6310
+[Pod 0] Test: epoch=5, it=176, acc=0.6416, time=1.6133
+[Pod 0] Test: epoch=5, it=177, acc=0.6982, time=1.7551
+[Pod 0] Test: epoch=5, it=178, acc=0.6689, time=2.0715
+[Pod 0] Test: epoch=5, it=179, acc=0.6641, time=1.9719
+[Pod 0] Test: epoch=5, it=180, acc=0.6943, time=2.1365
+[Pod 0] Test: epoch=5, it=181, acc=0.6904, time=1.8693
+[Pod 0] Test: epoch=5, it=182, acc=0.6553, time=2.4962
+[Pod 0] Test: epoch=5, it=183, acc=0.6641, time=2.2722
+[Pod 0] Test: epoch=5, it=184, acc=0.6670, time=2.0030
+[Pod 0] Test: epoch=5, it=185, acc=0.6592, time=1.9377
+[Pod 0] Test: epoch=5, it=186, acc=0.6621, time=1.5416
+[Pod 0] Test: epoch=5, it=187, acc=0.6846, time=1.8845
+[Pod 0] Test: epoch=5, it=188, acc=0.6660, time=1.9265
+[Pod 0] Test: epoch=5, it=189, acc=0.6562, time=1.8359
+[Pod 0] Test: epoch=5, it=190, acc=0.6650, time=2.3510
+[Pod 0] Test: epoch=5, it=191, acc=0.7002, time=2.0784
+[Pod 0] Test: epoch=5, it=192, acc=0.6660, time=2.1174
+[Pod 0] Test: epoch=5, it=193, acc=0.6592, time=2.0909
+[Pod 0] Test: epoch=5, it=194, acc=0.6611, time=2.1666
+[Pod 0] Test: epoch=5, it=195, acc=0.6807, time=2.2699
+[Pod 0] Test: epoch=5, it=196, acc=0.6602, time=2.1201
+[Pod 0] Test: epoch=5, it=197, acc=0.6807, time=1.8681
+[Pod 0] Test: epoch=5, it=198, acc=0.6689, time=2.0200
+[Pod 0] Test: epoch=5, it=199, acc=0.6523, time=2.4105
+[Pod 0] Test: epoch=5, it=200, acc=0.6611, time=2.1095
+[Pod 0] Test: epoch=5, it=201, acc=0.6738, time=2.0875
+[Pod 0] Test: epoch=5, it=202, acc=0.6699, time=2.1578
+[Pod 0] Test: epoch=5, it=203, acc=0.6689, time=2.0407
+[Pod 0] Test: epoch=5, it=204, acc=0.6982, time=1.8823
+[Pod 0] Test: epoch=5, it=205, acc=0.7012, time=1.7570
+[Pod 0] Test: epoch=5, it=206, acc=0.6836, time=1.4088
+[Pod 0] Test: epoch=5, it=207, acc=0.6523, time=1.3780
+[Pod 0] Test: epoch=5, it=208, acc=0.6680, time=1.7514
+[Pod 0] Test: epoch=5, it=209, acc=0.6680, time=1.8250
+[Pod 0] Test: epoch=5, it=210, acc=0.6602, time=2.3319
+[Pod 0] Test: epoch=5, it=211, acc=0.6758, time=1.9493
+[Pod 0] Test: epoch=5, it=212, acc=0.6904, time=2.0447
+[Pod 0] Test: epoch=5, it=213, acc=0.6748, time=2.0238
+[Pod 0] Test: epoch=5, it=214, acc=0.6611, time=1.7392
+[Pod 0] Test: epoch=5, it=215, acc=0.6748, time=2.1770
+[Pod 0] Test: epoch=5, it=216, acc=0.6836, time=2.3817
+[Pod 0] Test: epoch=5, it=217, acc=0.6631, time=2.0039
+[Pod 0] Test: epoch=5, it=218, acc=0.6777, time=2.0105
+[Pod 0] Test: epoch=5, it=219, acc=0.6855, time=1.7303
+[Pod 0] Test: epoch=5, it=220, acc=0.6562, time=2.1167
+[Pod 0] Test: epoch=5, it=221, acc=0.6797, time=1.7259
+[Pod 0] Test: epoch=5, it=222, acc=0.6758, time=1.6113
+[Pod 0] Test: epoch=5, it=223, acc=0.6787, time=1.7717
+[Pod 0] Test: epoch=5, it=224, acc=0.6543, time=2.0450
+[Pod 0] Test: epoch=5, it=225, acc=0.6475, time=1.7410
+[Pod 0] Test: epoch=5, it=226, acc=0.6963, time=1.7661
+[Pod 0] Test: epoch=5, it=227, acc=0.6631, time=1.5816
+[Pod 0] Test: epoch=5, it=228, acc=0.6465, time=1.7144
+[Pod 0] Test: epoch=5, it=229, acc=0.6426, time=1.8173
+[Pod 0] Test: epoch=5, it=230, acc=0.6611, time=1.9997
+[Pod 0] Test: epoch=5, it=231, acc=0.6748, time=1.8295
+[Pod 0] Test: epoch=5, it=232, acc=0.6797, time=1.5903
+[Pod 0] Test: epoch=5, it=233, acc=0.6797, time=2.2042
+[Pod 0] Test: epoch=5, it=234, acc=0.6807, time=2.1189
+[Pod 0] Test: epoch=5, it=235, acc=0.6846, time=1.5753
+[Pod 0] Test: epoch=5, it=236, acc=0.6914, time=1.7684
+[Pod 0] Test: epoch=5, it=237, acc=0.6602, time=1.6181
+[Pod 0] Test: epoch=5, it=238, acc=0.6738, time=1.8895
+[Pod 0] Test: epoch=5, it=239, acc=0.6963, time=1.8122
+[Pod 0] Test: epoch=5, it=240, acc=0.6680, time=1.6252
+[Pod 0] Test: epoch=5, it=241, acc=0.6650, time=1.7034
+[Pod 0] Test: epoch=5, it=242, acc=0.6846, time=1.8374
+[Pod 0] Test: epoch=5, it=243, acc=0.6602, time=1.8249
+[Pod 0] Test: epoch=5, it=244, acc=0.6836, time=1.7948
+[Pod 0] Test: epoch=5, it=245, acc=0.6924, time=1.9104
+[Pod 0] Test: epoch=5, it=246, acc=0.6602, time=1.7740
+[Pod 0] Test: epoch=5, it=247, acc=0.6699, time=1.6512
+[Pod 0] Test: epoch=5, it=248, acc=0.6826, time=1.6445
+[Pod 0] Test: epoch=5, it=249, acc=0.6631, time=1.4344
+[Pod 0] Test: epoch=5, it=250, acc=0.6768, time=1.7767
+[Pod 0] Test: epoch=5, it=251, acc=0.6650, time=2.0455
+[Pod 0] Test: epoch=5, it=252, acc=0.6582, time=1.8036
+[Pod 0] Test: epoch=5, it=253, acc=0.6885, time=1.6797
+[Pod 0] Test: epoch=5, it=254, acc=0.6484, time=1.9544
+[Pod 0] Test: epoch=5, it=255, acc=0.6465, time=1.5542
+[Pod 0] Test: epoch=5, it=256, acc=0.6436, time=1.4352
+[Pod 0] Test: epoch=5, it=257, acc=0.6641, time=1.5562
+[Pod 0] Test: epoch=5, it=258, acc=0.6787, time=1.5825
+[Pod 0] Test: epoch=5, it=259, acc=0.7129, time=1.3916
+[Pod 0] Test: epoch=5, it=260, acc=0.6689, time=1.4749
+[Pod 0] Test: epoch=5, it=261, acc=0.6914, time=1.4184
+[Pod 0] Test: epoch=5, it=262, acc=0.6680, time=1.4488
+[Pod 0] Test: epoch=5, it=263, acc=0.6719, time=0.8391
+[Pod 0] Test: epoch=5, it=264, acc=0.6650, time=0.5791
+[Pod 0] Test: epoch=5, it=265, acc=0.6797, time=0.5213
+[Pod 0] Test: epoch=5, it=266, acc=0.6719, time=0.4887
+[Pod 0] Test: epoch=5, it=267, acc=0.6865, time=0.5205
+[Pod 0] Test: epoch=5, it=268, acc=0.6328, time=0.4629
+[Pod 0] Test: epoch=5, it=269, acc=0.6631, time=0.3285
+[Pod 0] Test: epoch=5, it=270, acc=0.6603, time=0.0471
+[Pod 0] Test epoch 5 END: acc=0.6718, time=535.17
