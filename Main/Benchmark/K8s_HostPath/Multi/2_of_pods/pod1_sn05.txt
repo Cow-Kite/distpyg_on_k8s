@@ -1,4 +1,6 @@
-
+Train it 평균 시간: 0.95236 초
+Train epoch 평균 시간: 91.42800 초
+Test it 평균 시간: 0.33085 초
 --- Inputs: Namespace(dataset='ogbn-products', dataset_root_dir='./data/partitions/ogbn-products/2-parts', num_nodes=2, num_neighbors='5,5,5', node_rank=1, num_epochs=5, batch_size=1024, num_workers=2, num_loader_threads=10, concurrency=4, async_sampling=True, master_addr='pod-0', ddp_port=11111, train_loader_port=11112, test_loader_port=11113, logging=True, progress_bar=False)
 --- Inputs: Namespace(dataset='ogbn-products', dataset_root_dir='./data/partitions/ogbn-products/2-parts', num_nodes=2, num_neighbors='5,5,5', node_rank=1, num_epochs=5, batch_size=1024, num_workers=2, num_loader_threads=10, concurrency=4, async_sampling=True, master_addr='pod-0', ddp_port=11111, train_loader_port=11112, test_loader_port=11113, logging=True, progress_bar=False)
 --- Inputs: Namespace(dataset='ogbn-products', dataset_root_dir='./data/partitions/ogbn-products/2-parts', num_nodes=2, num_neighbors='5,5,5', node_rank=1, num_epochs=5, batch_size=1024, num_workers=2, num_loader_threads=10, concurrency=4, async_sampling=True, master_addr='pod-0', ddp_port=11111, train_loader_port=11112, test_loader_port=11113, logging=True, progress_bar=False)
