@@ -149,10 +149,12 @@ def train(
 
             start_grad = time.time()
             loss.backward()
-            optimizer.step()
             stop_grad = time.time() - start_grad
-            #print('[INFO] Grad_Time: ', stop_grad, flush=True)
             sync_time += stop_grad
+            optimizer.step()
+            
+            #print('[INFO] Grad_Time: ', stop_grad, flush=True)
+            
 
             total_loss += float(loss) * batch_size
             total_examples += batch_size
