@@ -1,4 +1,6 @@
-
+Train it 평균 시간: 1.65849 초
+Train epoch 평균 시간: 61.36400 초
+Test it 평균 시간: 2.09256 초
 --- Inputs: Namespace(async_sampling=True, batch_size=1024, concurrency=4, dataset='Reddit', dataset_root_dir='./data4/partitions/Reddit/4-parts', ddp_port=11111, logging=True, master_addr='sn05', node_rank=0, num_epochs=5, num_loader_threads=10, num_neighbors='5,5,5', num_nodes=4, num_workers=2, progress_bar=False, test_loader_port=11113, train_loader_port=11112)[Node 0] Train: epoch=1, it=0, loss=3.8880, time=13.6904, batch_time=0.3831, grad_Time=1.6582 
 [Node 0] Train: epoch=1, it=1, loss=3.7284, time=1.3219, batch_time=0.5202, grad_Time=0.7672 
 [Node 0] Train: epoch=1, it=2, loss=3.5900, time=1.6170, batch_time=0.4270, grad_Time=1.1523 

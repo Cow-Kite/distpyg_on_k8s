@@ -1,4 +1,6 @@
-
+Train it 평균 시간: 1.06405 초
+Train epoch 평균 시간: 78.78600 초
+Test it 평균 시간: 1.01754 초
 --- Inputs: Namespace(async_sampling=True, batch_size=1024, concurrency=4, dataset='reddit', dataset_root_dir='./data/partitions/reddit/2-parts', ddp_port=11111, logging=True, master_addr='sn04', node_rank=0, num_epochs=5, num_loader_threads=10, num_neighbors='5,5,5', num_nodes=2, num_workers=2, progress_bar=False, test_loader_port=11113, train_loader_port=11112)
 --- Inputs: Namespace(async_sampling=True, batch_size=1024, concurrency=4, dataset='Reddit', dataset_root_dir='./data/partitions/Reddit/2-parts', ddp_port=11111, logging=True, master_addr='sn04', node_rank=0, num_epochs=5, num_loader_threads=10, num_neighbors='5,5,5', num_nodes=2, num_workers=2, progress_bar=False, test_loader_port=11113, train_loader_port=11112)
 --- Inputs: Namespace(async_sampling=True, batch_size=1024, concurrency=4, dataset='Reddit', dataset_root_dir='./data/partitions/Reddit/2-parts', ddp_port=11111, logging=True, master_addr='sn04', node_rank=0, num_epochs=5, num_loader_threads=10, num_neighbors='5,5,5', num_nodes=2, num_workers=2, progress_bar=False, test_loader_port=11113, train_loader_port=11112)
