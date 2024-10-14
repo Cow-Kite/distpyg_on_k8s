@@ -1,10 +1,10 @@
 import re
 
 # 로그 파일 경로
-log_file_path = 'node0_sn04.txt'
+log_file_path = 'node0_sn04_second.txt'
 
 # 정규 표현식 패턴 수정
-train_it_pattern = re.compile(r"Train: epoch=\d+, it=\d+, loss=[\d.]+, time=([\d.]+), batch_time=[\d.]+, grad_Time=[\d.]+")
+train_it_pattern = re.compile(r"Train: epoch=\d+, it=\d+, loss=[\d.]+, time=([\d.]+), batch_time=[\d.]+, grad_Time=[\d.]+, update_time=[\d.]+, ")
 train_epoch_pattern = re.compile(r"Train epoch \d+ END: loss=[\d.]+, time=([\d.]+), sync_time=[\d.]+")  # Train epoch END에 맞춘 패턴
 test_it_pattern = re.compile(r"Test: epoch=\d+, it=\d+, acc=[\d.]+, time=([\d.]+)")  # Test 로그 형식에 맞춘 패턴
 

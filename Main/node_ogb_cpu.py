@@ -146,10 +146,17 @@ def train(
             stop_batch = time.time() - batch_start
             #print('[INFO] Batch_Train_Time: ', time.time() - batch_start, flush=True)
 
+            #grad: 그래디언트 계산하고 동기화하는 시간
+            #update: 계산된 그래디언트로 파라미터 업데이트하는 시간
+            #sync_time: 그래디언트 계산하고 동기화 누적한 시간
             start_grad = time.time()
             loss.backward()
-            optimizer.step()
             stop_grad = time.time() - start_grad
+
+            start_update = time.time()
+            optimizer.step()
+            stop_update = time.time() - start_update
+
             #print('[INFO] Grad_Time: ', stop_grad, flush=True)
             sync_time += stop_grad
 
@@ -160,7 +167,8 @@ def train(
                       f'it={i}, loss={loss:.4f}, '
                       f'time={(time.time() - batch_time):.4f}, '
                       f'batch_time={(stop_batch):.4f}, '
-                      f'grad_Time={(stop_grad):.4f} ')
+                      f'update_time={(stop_update):.4f},'
+                      f'grad_time={(stop_grad):.4f} ')
             batch_time = time.time()
 
             if logfile:
