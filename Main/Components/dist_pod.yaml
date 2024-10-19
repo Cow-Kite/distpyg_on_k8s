@@ -1,4 +1,3 @@
-# statefulSet으로 cephfs의 같은 경로를 공유하는 pods 생성
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
@@ -21,7 +20,12 @@ spec:
         volumeMounts:
         - name: cephfs-storage  
           mountPath: /data
+        - name: dshm
+          mountPath: /dev/shm
       volumes:
       - name: cephfs-storage  
         persistentVolumeClaim:
-          claimName: cephfs-pvc 
+          claimName: cephfs-pvc
+      - name: dshm
+        emptyDir:
+          medium: Memory
