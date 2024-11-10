@@ -1,7 +1,7 @@
 import re
 
 # 로그 파일 경로
-log_file_path = 'node0_sn05.txt'
+log_file_path = 'sn04.txt'
 
 # 정규 표현식 패턴 수정
 train_it_pattern = re.compile(r"Train: epoch=\d+, it=\d+, loss=[\d.]+, time=([\d.]+), batch_time=([\d.]+), grad_time=([\d.]+), update_time=[\d.]+")
