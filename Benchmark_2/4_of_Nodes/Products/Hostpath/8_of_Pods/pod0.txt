@@ -1,4 +1,6 @@
-
+Train it 평균 시간: 1.19942 초
+Train epoch 평균 시간: 28.78800 초
+Test it 평균 시간: 0.58804 초
 --- Inputs: Namespace(dataset='ogbn-products', dataset_root_dir='./data8/partitions/ogbn-products/8-parts', num_nodes=8, num_neighbors='5,5,5', node_rank=0, num_epochs=5, batch_size=1024, num_workers=2, num_loader_threads=10, concurrency=4, async_sampling=True, master_addr='pod-0', ddp_port=11111, train_loader_port=11112, test_loader_port=11113, logging=True, progress_bar=False)[Pod 0] Train: epoch=1, it=0, loss=3.8599, time=8.7079, batch_time=0.6095, grad_Time=1.1330 
 [Pod 0] Train: epoch=1, it=1, loss=3.7157, time=1.3105, batch_time=0.5375, grad_Time=0.7430 
 [Pod 0] Train: epoch=1, it=2, loss=3.6088, time=1.3536, batch_time=0.4514, grad_Time=0.8816 
