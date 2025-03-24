@@ -6,7 +6,7 @@
 ### - Paper
 __강소연__, 이상훈, 문양세, "쿠버네티스와 Ceph 환경을 활용한 GraphSAGE 분산 학습 프레임워크", 데이타베이스연구, Vol. 40, No. 2, pp.108-125, 2024.
 ### - 기술스택
-쿠버네티스, Ceph, PyTorch, PyTorch Geometric, Grafana, Prometheus
+Kubernetes, Docker, PyTorch, PyTorch Geometric, Ceph, Grafana, Prometheus
 ### - 발표자료
 [석사학위청구논문심사.pdf](https://github.com/user-attachments/files/19434631/default.pdf)
 [석사학위청구논문심사.pptx](https://github.com/user-attachments/files/19434633/default.pptx)
