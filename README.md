@@ -10,7 +10,8 @@ Kubernetes, Docker, PyTorch, PyTorch Geometric, Ceph, Grafana, Prometheus
 ### - 발표자료
 [석사학위청구논문심사.pdf](https://github.com/user-attachments/files/19434631/default.pdf) <br>
 [석사학위청구논문심사.pptx](https://github.com/user-attachments/files/19434633/default.pptx)
-<br>
+
+
 ## 프레임워크 동작 과정
 __(1) Pod Creating__<br>
 - 분산 학습 수행할 파드 생성<br>
